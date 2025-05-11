@@ -73,7 +73,7 @@ wss.on('connection', (ws, req) => {
 
   ws.on('close', () => {
     // 클라이언트 연결 해제 시 FFmpeg 강제 종료
-    console.log('▶ Client disconnected, killing FFmpeg');
+    console.log('Client disconnected, killing FFmpeg');
     ffmpeg.kill('SIGKILL');
   });
 });
